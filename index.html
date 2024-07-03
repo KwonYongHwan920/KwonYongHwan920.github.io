@@ -1,647 +1,133 @@
 <!DOCTYPE html>
-<html lang="utf-8" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-    layout:decorate="~{fragment/main/main_layout}">
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="" type="image/x-icon">
 
-</head>
+        <!--=============== BOXICONS ===============-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-<body>
-    <th:block layout:fragment="content">
-        <link rel="stylesheet" href="/css/content/indexpage/mainpage.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <link rel='stylesheet'
-            href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&amp;display=swap'>
-        <div id="wrap">
-            <div class="c_inner">
-                <div class="main1">
-                    <div class="m1_slide">
-                        <div class="slide1 one">
-                            <a href="/food/searchFoodPage">
-                                <div class="slideImg">
-                                    <img src="/img/main/main1_img1.jpg" alt="">
-                                </div>
-                                <div class="slideText">
-                                    <p class="slideT one">쉽게.</p>
-                                    <p class="slideT two">간편하게.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide1 three">
-                            <a href="/food/searchFoodPage">
-                                <div class="slideImg">
-                                    <img src="/img/main/main1_img3.jpg" alt="">
-                                </div>
-                                <div class="slideText">
-                                    <p class="slideT one">쉽게.</p>
-                                    <p class="slideT two">간편하게.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide1 four">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_002">
-                                <div class="slideImg">
-                                    <img src="/img/main/main1_img4.png" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide1 five">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_003">
-                                <div class="slideImg">
-                                    <img src="/img/main/main1_img5.png" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide1 six">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_004">
-                                <div class="slideImg">
-                                    <img src="/img/main/main1_img6.png" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide1 seven">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_001">
-                                <div class="slideImg">
-                                    <img src="/img/main/main1_img7.png" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide1 eight">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_006">
-                                <div class="slideImg">
-                                    <img src="/img/main/main1_img8.png" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slide1 nine">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_005">
-                                <div class="slideImg">
-                                    <img src="/img/main/main1_img9.png" alt="">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="arrows prev">
-                        <p class="btn prev">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="#f4f4f4"
-                                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                                </svg>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="arrows next">
-                        <p class="btn next">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="#f4f4f4"
-                                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="m_remote">
-                        <p class="btn pause">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="#f4f4f4"
-                                    class="bi bi-pause-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5" />
-                                </svg>
-                            </span>
-                        </p>
-                        <p class="btn play">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="#f4f4f4"
-                                    class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                                </svg></span>
-                        </p>
-                        <div class="slide_num">
-                            <span class="current-slide">01</span>
-                            <span>/</span>
-                            <span class="total-slides">08</span>
-                        </div>
-                        <p class="btn menu">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="#f4f4f4"
-                                    class="bi bi-grid-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z" />
-                                </svg>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="slideAll">
-                <div class="sa_inner">
-                    <div class="sa_slides">
-                        <div class="sa_slide">
-                            <a href="/food/searchFoodPage">
-                                <div class="sa_img">
-                                    <img src="/img/main/main1_img1.jpg" alt="">
-                                </div>
-                                <p class="sa_text">
-                                    쉽게. 간편하게.
-                                </p>
-                            </a>
-                        </div>
-                        <div class="sa_slide">
-                            <a href="/food/searchFoodPage">
-                                <div class="sa_img">
-                                    <img src="/img/main/main1_img3.jpg" alt="">
-                                </div>
-                                <p class="sa_text">
-                                    쉽게. 간편하게.
-                                </p>
-                            </a>
-                        </div>
-                        <div class="sa_slide">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_002">
-                                <div class="sa_img">
-                                    <img src="/img/main/main1_img4.png" alt="">
-                                </div>
-                                <p class="sa_text">
-                                    더울 땐, 입맛을 살리는 시원한 음식
-                                </p>
-                            </a>
-                        </div>
-                        <div class="sa_slide">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_003">
-                                <div class="sa_img">
-                                    <img src="/img/main/main1_img5.png" alt="">
-                                </div>
-                                <p class="sa_text">
-                                    비 올 때 함께 젖을 감성적인 음식
-                                </p>
-                            </a>
-                        </div>
-                        <div class="sa_slide">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_004">
-                                <div class="sa_img">
-                                    <img src="/img/main/main1_img6.png" alt="">
-                                </div>
-                                <p class="sa_text">
-                                    세상이 하얗게 덮인 순간, 낭만적인 음식
-                                </p>
-                            </a>
-                        </div>
-                        <div class="sa_slide">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_001">
-                                <div class="sa_img">
-                                    <img src="/img/main/main1_img7.png" alt="">
-                                </div>
-                                <p class="sa_text">
-                                    추울 때, 몸과 마음을 녹여줄 따뜻한 음식
-                                </p>
-                            </a>
-                        </div>
-                        <div class="sa_slide">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_006">
-                                <div class="sa_img">
-                                    <img src="/img/main/main1_img8.png" alt="">
-                                </div>
-                                <p class="sa_text">
-                                    좋은날, 쉽게. 간편하게.
-                                </p>
-                            </a>
-                        </div>
-                        <div class="sa_slide">
-                            <a href="/food/ddabongcode?ddabongCode=DDABONG_005">
-                                <div class="sa_img">
-                                    <img src="/img/main/main1_img9.png" alt="">
-                                </div>
-                                <p class="sa_text">
-                                    야식 한 접시로 오늘의 피로를 달래보세요.
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="btnClose">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffd57a"
-                            class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                            <path
-                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="c_inner two">
-                <div class="main2">
-                    <div class="m2_title">
-                        <p class="m2_title1">재료별</p>
-                        <p class="m2_title2">Recipe</p>
-                    </div>
-                    <div class="m2_recipes">
-                        <a class="recipe" th:href="@{/food/searchFoodPage(foodMtrlCode=FOOD_MTRL_001)}">
-                            <div class="ingImg">
-                                <img src="/img/main/main2_img1.jpg" alt="">
-                            </div>
-                            <p class="ingText">
-                                소고기
-                            </p>
-                        </a>
-                        <a class="recipe" th:href="@{/food/searchFoodPage(foodMtrlCode=FOOD_MTRL_009)}">
-                            <div class="ingImg">
-                                <img src="/img/main/main2_img2.jpg" alt="">
-                            </div>
-                            <p class="ingText">
-                                쌀
-                            </p>
-                        </a>
-                        <a class="recipe" th:href="@{/food/searchFoodPage(foodMtrlCode=FOOD_MTRL_010)}">
-                            <div class="ingImg">
-                                <img src="/img/main/main2_img3.jpg" alt="">
-                            </div>
-                            <p class="ingText">
-                                밀가루
-                            </p>
-                        </a>
-                        <a class="recipe" th:href="@{/food/searchFoodPage(foodMtrlCode=FOOD_MTRL_002)}">
-                            <div class="ingImg">
-                                <img src="/img/main/main2_img4.jpg" alt="">
-                            </div>
-                            <p class="ingText">
-                                돼지고기
-                            </p>
-                        </a>
-                        <a class="recipe" th:href="@{/food/searchFoodPage(foodMtrlCode=FOOD_MTRL_007)}">
-                            <div class="ingImg">
-                                <img src="/img/main/main2_img5.jpg" alt="">
-                            </div>
-                            <p class="ingText">
-                                달걀/유제품
-                            </p>
-                        </a>
-                        <a class="recipe" th:href="@{/food/searchFoodPage(foodMtrlCode=FOOD_MTRL_003)}">
-                            <div class="ingImg">
-                                <img src="/img/main/main2_img6.jpg" alt="">
-                            </div>
-                            <p class="ingText">
-                                닭고기
-                            </p>
-                        </a>
-                        <a class="recipe" th:href="@{/food/searchFoodPage(foodMtrlCode=FOOD_MTRL_012)}">
-                            <div class="ingImg">
-                                <img src="/img/main/main2_img7.jpg" alt="">
-                            </div>
-                            <p class="ingText">
-                                버섯류
-                            </p>
-                        </a>
-                        <a class="recipe" th:href="@{/food/searchFoodPage(foodMtrlCode=FOOD_MTRL_013)}">
-                            <div class="ingImg">
-                                <img src="/img/main/main2_img8.jpg" alt="">
-                            </div>
-                            <p class="ingText">
-                                과일류
-                            </p>
-                        </a>
-                        <a class="recipe" th:href="@{/food/searchFoodPage(foodMtrlCode=FOOD_MTRL_014)}">
-                            <div class="ingImg">
-                                <img src="/img/main/main2_img9.jpg" alt="">
-                            </div>
-                            <p class="ingText">
-                                콩/견과류
-                            </p>
-                        </a>
-                        <a class="recipe" th:href="@{/food/searchFoodPage(foodMtrlCode=FOOD_MTRL_006)}">
-                            <div class="ingImg">
-                                <img src="/img/main/main2_img10.jpg" alt="">
-                            </div>
-                            <p class="ingText">
-                                해물류
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="c_inner">
-                <div class="main3">
-                    <div class="m2_title">
-                        <p class="m2_title1">종류별</p>
-                        <p class="m2_title2">Recipe</p>
-                    </div>
-                    <div class="mainImgSlide-inner">
-                        <div class="mainAccomSubImg">
-                            <a th:href="@{/food/searchFoodPage(foodKindCode=FOOD_KIND_005)}" class="imgListSlide">
-                                <img class="imgSlideList" src="/img/main/main3_dessert.jpg" alt="">
-                                <div class="imgTextBox">
-                                    <p>디저트</p>
-                                </div>
-                            </a>
-                            <a th:href="@{/food/searchFoodPage(foodKindCode=FOOD_KIND_001)}" class="imgListSlide">
-                                <img class="imgSlideList" src="/img/main/main3_sideDish.jpg" alt="">
-                                <div class="imgTextBox">
-                                    <p>밑반찬</p>
-                                </div>
-                            </a>
-                            <a th:href="@{/food/searchFoodPage(foodKindCode=FOOD_KIND_002)}" class="imgListSlide">
-                                <img class="imgSlideList" src="/img/main/main3_mainDish.jpg" alt="">
-                                <div class="imgTextBox">
-                                    <p>메인반찬</p>
-                                </div>
-                            </a>
-                            <a th:href="@{/food/searchFoodPage(foodKindCode=FOOD_KIND_003)}" class="imgListSlide">
-                                <img class="imgSlideList" src="/img/main/main3_soup.jpg" alt="">
-                                <div class="imgTextBox">
-                                    <p>국/탕</p>
-                                </div>
-                            </a>
-                            <a th:href="@{/food/searchFoodPage(foodKindCode=FOOD_KIND_004)}" class="imgListSlide">
-                                <img class="imgSlideList" src="/img/main/main3_stew.jpg" alt="">
-                                <div class="imgTextBox">
-                                    <p>찌개</p>
-                                </div>
-                            </a>
-                            <a th:href="@{/food/searchFoodPage(foodKindCode=FOOD_KIND_006)}" class="imgListSlide">
-                                <img class="imgSlideList" src="/img/main/main3_noodle.jpg" alt="">
-                                <div class="imgTextBox">
-                                    <p>면/만두</p>
-                                </div>
-                            </a>
-                            <a th:href="@{/food/searchFoodPage(foodKindCode=FOOD_KIND_014)}" class="imgListSlide">
-                                <img class="imgSlideList" src="/img/main/main3_bread.jpg" alt="">
-                                <div class="imgTextBox">
-                                    <p>빵</p>
-                                </div>
-                            </a>
-                            <a th:href="@{/food/searchFoodPage(foodKindCode=FOOD_KIND_015)}" class="imgListSlide">
-                                <img class="imgSlideList" src="/img/main/main3_cookie.jpg" alt="">
-                                <div class="imgTextBox">
-                                    <p>과자</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="c_inner">
-                <div class="main4">
-                    <div class="m2_title">
-                        <p class="m2_title1">상황별</p>
-                        <p class="m2_title2">Recipe</p>
-                    </div>
-                    <div class="sit_wrap">
-                        <div class="sit_inner">
-                            <div class="sit_group">
-                                <a th:href="@{/food/searchFoodPage(foodUsageCode=FOOD_USAGE_005)}">
-                                    <div class="item1"></div>
-                                </a>
-                                <a th:href="@{/food/searchFoodPage(foodUsageCode=FOOD_USAGE_010)}">
-                                    <div class="item2"></div>
-                                </a>
-                                <a th:href="@{/food/searchFoodPage(foodUsageCode=FOOD_USAGE_001)}">
-                                    <div class="item3 hoverItem"></div>
-                                </a>
-                                <a th:href="@{/food/searchFoodPage(foodUsageCode=FOOD_USAGE_011)}">
-                                    <div class="item4"></div>
-                                </a>
-                                <a th:href="@{/food/searchFoodPage(foodUsageCode=FOOD_USAGE_002)}">
-                                    <div class="item5"></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main4_inner">
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="./static/css/main">
+        <link rel="stylesheet" href="./static/css/main_swiper.css">
 
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="c_inner">
-                    <div class="main5">
-                        <div class="m2_title">
-                            <p class="m2_title1">방법별</p>
-                            <p class="m2_title2">Recipe</p>
-                        </div>
-                        <div>
-                            <div class="typeWrap">
-                                <div class="typeInner">
-                                    <div class="typeBlock">
-                                        <div class="typeCard border-left-behind border-right-behind border-bottom-behind"
-                                            onclick="window.location.href='/food/searchFoodPage?foodTypeCode=FOOD_TYPE_011'">
-                                            <div class="shadow" style="--url: url('/img/type/back1.jpg')"></div>
-                                            <div class="image background" style="--url: url('/img/type/back1.jpg')">
-                                            </div>
-                                            <div class="image cutout"
-                                                style="--url: url('/img/type/gubgi-removebg-preview.png')"></div>
-                                            <div class="typeContent">
-                                                <h2>굽기</h2>
-                                                <p>굽는 방식의 요리레시피를 둘러보세요</p>
-                                            </div>
-                                        </div>
-                                        <div class="typeCard border-left-behind border-right-behind border-bottom-behind"
-                                            onclick="window.location.href='/food/searchFoodPage?foodTypeCode=FOOD_TYPE_004'">
-                                            <div class="shadow" style="--url: url('/img/type/back2.jpg')"></div>
-                                            <div class="image background" style="--url: url('/img/type/back2.jpg')">
-                                            </div>
-                                            <div class="image cutout"
-                                                style="--url: url('/img/type/zorim-removebg-preview.png')"></div>
-                                            <div class="typeContent">
-                                                <h2>조림</h2>
-                                                <p>조림 방식의 요리레시피를 둘러보세요</p>
-                                            </div>
-                                        </div>
-                                        <div class="typeCard border-left-behind border-right-behind border-bottom-behind"
-                                            onclick="window.location.href='/food/searchFoodPage?foodTypeCode=FOOD_TYPE_001'">
-                                            <div class="shadow" style="--url: url('/img/type/back3.jpg')"></div>
-                                            <div class="image background" style="--url: url('/img/type/back3.jpg')">
-                                            </div>
-                                            <div class="image cutout"
-                                                style="--url: url('/img/type/bokki-removebg-preview.png')"></div>
-                                            <div class="typeContent">
-                                                <h2>볶기</h2>
-                                                <p>볶는 방식의 요리레시피를 둘러보세요</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="typeCard border-left-behind border-right-behind border-bottom-behind"
-                                                onclick="window.location.href='/food/searchFoodPage?foodTypeCode=FOOD_TYPE_003'">
-                                                <div class="shadow" style="--url: url('/img/type/back4.jpg')"></div>
-                                                <div class="image background" style="--url: url('/img/type/back4.jpg')">
-                                                </div>
-                                                <div class="image cutout"
-                                                    style="--url: url('/img/type/buchigi-removebg-preview.png')"></div>
-                                                <div class="typeContent">
-                                                    <h2>부침</h2>
-                                                    <p>부치기 방식의 요리레시피를 둘러보세요</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="c_inner">
-                <div class="main6">
-                    <div class="m2_title">
-                        <p class="m2_title1">날씨별</p>
-                        <p class="m2_title2">Recipe</p>
-                    </div>
-                    <div class="weatherWrap">
-                        <div class="weatherInner">
-                            <div class="weatherCategoryBlock">
-                                <div class="weatherDivBlock">
-                                    <div class="card"
-                                        onclick="window.location.href='/food/ddabongcode?ddabongCode=DDABONG_002'"><img
-                                            src="/img/weather/mainhot.jpg"
-                                            alt="Recommended food according to the weather" />
-                                        <div class="weathertext">
-                                            <h2 data-splitting="">Hot</h2>
-                                            <p data-splitting=""> 더운날 입맛을 살리는 시원한 음식을 드시고 시원한 하루 보내세요!</p>
-                                        </div>
-                                    </div>
-                                    <div class="card"
-                                        onclick="window.location.href='/food/ddabongcode?ddabongCode=DDABONG_001'"><img
-                                            src="/img/weather/maincold.jpg"
-                                            alt="Recommended food according to the weather" />
-                                        <div class="weathertext">
-                                            <h2 data-splitting="">Cold</h2>
-                                            <p data-splitting="">추운날 따뜻한 온기를 전해주는 음식으로 몸과 마음을 녹여주세요!</p>
-                                        </div>
-                                    </div>
-                                    <div class="card"
-                                        onclick="window.location.href='/food/ddabongcode?ddabongCode=DDABONG_003'"><img
-                                            src="/img/weather/mainrain.jpg"
-                                            alt="Recommended food according to the weather" />
-                                        <div class="weathertext">
-                                            <h2 data-splitting="">Rain</h2>
-                                            <p data-splitting="">비오는 날 생각나는 음식으로 감성에 젖어보세요!</p>
-                                        </div>
-                                    </div>
-                                    <div class="card"
-                                        onclick="window.location.href='/food/ddabongcode?ddabongCode=DDABONG_004'"><img
-                                            src="/img/weather/mainsnow.jpg"
-                                            alt="Recommended food according to the weather" />
-                                        <div class="weathertext">
-                                            <h2 data-splitting="">Snow</h2>
-                                            <p data-splitting="">눈이 오는 날 낭만적인 음식으로 특별한 날을 만들어보세요!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="csc_ann">
-                <div class="csc_annTitle">
-                    <div class="m2_title">
-                        <p class="m2_title1">공지사항</p>
-                        <p class="m2_title2">Notice</p>
-                    </div>
-                    <div class="csc_annPlus">
-                        <a href="/csc/annListForm">
-                            <p class="csc_annPlus1">더보기</p>
-                        </a>
-                        <p class="csc_annPlus2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#333"
-                                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-                            </svg>
-                        </p>
-                    </div>
-                </div>
-                <div class="csc_annBlock">
-                    <a th:href="@{/csc/annDetailForm(annCode=${ann.annCode})}" th:each="ann, state : ${annList}"
-                        class="csc_annLink"
-                        th:if="${(annList != null)&&(#lists.size(annList) != 0) && (state.index lt 6)}">
-                        <div class="csc_annBox">
-                            <div class="annTypeBox">
-                                <p class="slash">[</p>
-                                <p class="annType">[[${ann.annCateList.cateName}]]</p>
-                                <p class="slash">]</p>
-                            </div>
-                            <p class="annTitle">
-                                [[${ann.annTitle}]]
-                            </p>
-                            <div class="annDateBox">
-                                <p class="annDate">[[${ann.annDate}]]</p>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="csc_annBox" th:if="${annList==null ||#lists.size(annList) == 0}">
-                        <div>
-                            내용이 없습니다.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="csc_qna">
-                <div class="csc_annTitle">
-                    <div class="m2_title">
-                        <p class="m2_title1">자주 찾는 질문</p>
-                        <p class="m2_title2">QnA</p>
-                    </div>
-                    <div class="csc_annPlus">
-                        <a href="/csc/qnaListForm">
-                            <p class="csc_annPlus1">더보기</p>
-                        </a>
-                        <p class="csc_annPlus2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#333"
-                                class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-                            </svg>
-                        </p>
-                    </div>
-                </div>
-                <div class="qnaBlock">
-                    <a class="qnaBox" th:href="@{/csc/qnaListForm(qnaCode=${qna.qnaCode})}"
-                        th:each="qna, state :  ${qnaList}"
-                        th:if="${(qnaList!=null)&&(#lists.size(qnaList) != 0) && (state.index lt 6)}">
-                        <div class="qnaTextBox">
-                            <span class="qnaIcon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f3c053"
-                                    class="bi bi-question-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                                    <path
-                                        d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94" />
-                                </svg>
-                            </span>
-                            <p class="qnaText">
-                                <span></span>[[${qna.qnaQuestion}]]
-                            </p>
-                        </div>
-                        <div class="qnaGo">
-                            <p>바로가기</p>
-                            <p class="qnaGoIcon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#666"
-                                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </p>
-                        </div>
-                    </a>
-                    <div class="qnaBox" th:if="${qnaList==null ||#lists.size(qnaList) == 0}">
-                        내용이 없습니다.
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
-        <script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
-        <script src="/js/slick.min.js"></script>
-        <script src="/js/content/indexpage/mainpage.js"></script>
-    </th:block>
-    <th:block layout:fragment="content_js">
-    </th:block>
-</body>
+        <title> 백엔드 개발자 '권용환' 포트폴리오 </title>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">KWON's</a>
 
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <!--==== Go Home ====-->
+                        <li class="nav__item">
+                            <a href="#" class="nav__link active-link">
+                                <i class="bx bx-home"></i>
+                            </a>
+                        </li>
+
+                        <!--==== Go About ====-->
+                        <li class="nav__item">
+                            <a href="#" class="nav__link active-link">
+                                <i class='bx bx-user'></i>
+                            </a>
+                        </li>
+
+                        <!--==== Go Skills ====-->
+                        <li class="nav__item">
+                            <a href="#" class="nav__link active-link">
+                                <i class='bx bx-wrench'></i>
+                            </a>
+                        </li>
+
+                        <!--========= Go Project =========-->
+                        <li class="nav__item">
+                            <a href="#" class="nav__link active-link">
+                                <i class='bx bx-slideshow' ></i>
+                            </a>
+                        </li>
+
+                        <!--========= Go Work =========-->
+                        <li class="nav__item">
+                            <a href="#" class="nav__link active-link">
+                                <i class='bx bx-briefcase-alt-2' ></i>
+                            </a>
+                        </li>
+
+                        <!--======== Go Certifications =========-->
+                        <li class="nav__item">
+                            <a href="#" class="nav__link active-link">
+                                <i class='bx bx-id-card' ></i>
+                            </a>
+                        </li>
+
+                        <!--========= Go Contact =========-->
+                        <li class="nav__item">
+                            <a href="#" class="nav__link active-link">
+                                <i class='bx bx-phone-call'></i>
+                            </a>
+                        </li>
+            
+        </header>
+
+        <!--=============== MAIN ===============-->
+        <main class="main">
+            <!--=============== HOME ===============-->
+            <section class="home section" id="home">
+                
+            </section>
+            
+            <!--=============== ABOUT ===============-->
+            <section class="about section" id="about">
+                
+            </section>
+
+            <!--=============== SKILLS ===============-->
+            <section class="skills section" id="skills">
+                
+            </section>
+
+            <!--=============== PROJECT ===============-->
+            <section class="Project section">
+                
+            </section>
+
+            <!--=============== WORK ===============-->
+            <section class="work section" id="work">
+                
+            </section>
+
+            <!--=============== Certifications ===============-->
+            <section class="Certifications section">
+                
+            </section>
+
+            <!--=============== CONTACT ===============-->
+            <section class="contact section" id="contact">
+                
+            </section>
+        </main>
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer">
+            
+        </footer>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src=""></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src=""></script>
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src=""></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src=""></script>
+    </body>
 </html>
